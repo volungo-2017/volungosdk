@@ -1,3 +1,7 @@
-module.exports  = {
-    Account : require('./Account')
+
+
+module.exports ={
+  AccountAPI:require('./Account'),
+
 }
+ 

@@ -1,6 +1,6 @@
 {
-  "name": "@felipecosta91/volungo-sdk",
-  "version": "1.0.0",
+  "name": "@volungo-2017/volungo-sdk",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "module": "axios",
@@ -8,6 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:volungo-2017/volungosdk.git"
+  }, 
   "author": "",
   "license": "ISC",
   "dependencies": {
