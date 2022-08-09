@@ -17,7 +17,7 @@ constructor(){
     }
     async register(data){
         try{
-        const headers = token ? {Authorization: `Bearer ${token}`,'Content-Type': 'application/json'} : {'Content-Type': 'application/json'}
+        const headers =  {'Content-Type': 'application/json'}
         return  await Axios.post(`${this.url}/register`, data ,{headers})
         }
         catch(err){
