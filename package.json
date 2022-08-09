@@ -1,6 +1,6 @@
 {
-  "name": "@volungo-2017/volungo-sdk",
-  "version": "1.0.6",
+  "name": "@volungo-2017/volungorequest",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "module": "axios",
