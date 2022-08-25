@@ -1,11 +1,11 @@
 const Axios = require('axios')
-class PostApi{
+
+class PostAPI{
    
   constructor(){
       this.url = process.env.NEXT_PUBLIC_POSTS_HOST
   }
       async   publish(payload,token){
-  
          try{
           const headers = token ? {Authorization: `Bearer ${token}`,'Content-Type': 'application/json'} : {'Content-Type': 'application/json'}
          return  await Axios.post(`${this.url}/posts`, payload ,{headers})
@@ -15,10 +15,11 @@ class PostApi{
          }
            
       }
+
      
   
   }
   
   
   
-  module.exports = new PostApi()
+  module.exports = new PostAPI()
