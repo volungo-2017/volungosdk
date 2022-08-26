@@ -1,11 +1,14 @@
 const Axios = require('axios')
-
+const nookies = require("nookies") ;
 class PostAPI{
-   
+
+
   constructor(){
       this.url = process.env.NEXT_PUBLIC_POSTS_HOST
   }
-      async   publish(payload,token){
+      async   publish(payload){
+        const cookies = nookies.parseCookies()
+        const token =  cookies['volungo.token']
          try{
           const headers = token ? {Authorization: `Bearer ${token}`,'Content-Type': 'application/json'} : {'Content-Type': 'application/json'}
          return  await Axios.post(`${this.url}/posts`, payload ,{headers})
