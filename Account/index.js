@@ -19,6 +19,7 @@ constructor(){
        }
          
     }
+
     async register(data){
         try{
         const headers =  {'Content-Type': 'application/json'}
@@ -26,6 +27,26 @@ constructor(){
         }
         catch(err){
          return err
+        }
+     }
+
+     async find(id){
+        try{
+            const headers = {'Content-Type':'application/json'}
+            return await Axios.get(`${this.url}/user/${id}`,{},{headers})
+
+        }catch(err){
+            return err
+        }
+     }
+
+     async surfleUser(){
+        try{
+            const headers = {'Content-Type':'application/json'}
+            return await Axios.get(`${this.url}/user/surfle/false`,{},{headers})
+
+        }catch(err){
+            return err
         }
      }
 
