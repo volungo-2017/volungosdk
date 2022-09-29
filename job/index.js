@@ -59,6 +59,38 @@ class JobsAPI{
 
       }
 
+      async Verify(jobID){
+        
+        const cookies = nookies.parseCookies()
+        const token =  cookies['volungo.token']
+         try{
+          const headers = token ? {Authorization: `Bearer ${token}`,'Content-Type': 'application/json'} : {'Content-Type': 'application/json'}
+         return  await Axios.post(`${this.url}/job/apply`, jobID ,{headers})
+         }
+         catch(err){
+          return err
+         }
+
+      }
+
+
+      async Apply(payload){
+        
+        const cookies = nookies.parseCookies()
+        const token =  cookies['volungo.token']
+         try{
+          const headers = token ? {Authorization: `Bearer ${token}`,'Content-Type': 'application/json'} : {'Content-Type': 'application/json'}
+         return  await Axios.post(`${this.url}/job/application`, payload ,{headers})
+         }
+         catch(err){
+          return err
+         }
+
+
+
+
+      }
+
      
   
   }

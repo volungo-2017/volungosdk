@@ -3,7 +3,8 @@
 module.exports ={
   AccountAPI:require('./Account'),
   PostAPI:require('./Post'),
-  JobsAPI:require('./job')
+  JobsAPI:require('./Jobs'),
+  ChatAPI:require('./Chat')
 
 }
  
